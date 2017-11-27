@@ -20,7 +20,7 @@ $sql = "SELECT * FROM staff WHERE password='$password' and username='$username' 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "sucks";
+    echo "Done";
 
 }
  else {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html>
 
 <head>
@@ -27,7 +27,7 @@
                     <div class="bar"></div>
                 </div>
                 <div class="input-container">
-                    <input type="#{type}" id="#{label}" required="required" name="password" />
+                    <input type="password" id="password" name="password" required="required" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
                     <label for="#{label}">Password</label>
                     <div class="bar"></div>
                 </div>

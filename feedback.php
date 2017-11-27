@@ -16,7 +16,10 @@ $feedback=$_POST["feedback"];
 $sql = "INSERT INTO feedback(feedback) VALUES('$feedback')";
 
 if (mysqli_query($conn,$sql)) {
-    echo "Thank you for your feedback...!!";
+    echo "<script>
+	alert('Thank you for your feedback.');
+	window.location.href='./index.html';
+	</script>";
 }
 else{
 	echo "Error: " . $sql . "<br>" . mysqli_error($conn);

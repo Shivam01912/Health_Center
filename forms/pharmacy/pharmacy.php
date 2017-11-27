@@ -9,7 +9,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+	die("Connection failed: " . $conn->connect_error);
 } 
 
 $username=$_POST["username"];
@@ -20,12 +20,14 @@ $sql = "SELECT * FROM staff WHERE password='$password' and username='$username' 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "sucks";
+	header('location:../../docks/pharmacy/pharmacy.html');
 
 }
- else {
-    echo "Invalid...try again";
-    header('location:./pharmacy.html');
+else {
+	echo "<script>
+	alert('Invalid Credentials...Please Try Again...!!');
+	window.location.href='./pharmacy.html';
+	</script>";
 
 }
 
